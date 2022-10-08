@@ -26,10 +26,11 @@ left:10%;
 }
 .navbar {
 	list-style-type: none;
-	text-align: center;
+align-items: center;
+justify-content: center;
 	display: flex;
- margin-top: -90px;
- margin-left: 30%;
+ margin-top: 90px;
+ 
 
  
 }
@@ -72,4 +73,8 @@ border-radius: 30px;
 }
 .searchInput::placeholder{
   color: lightgray;
+}
+.letter{
+  font-size: 30px;
+
 }
