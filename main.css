@@ -57,11 +57,19 @@ left:10%;
 
 .search{
 position: absolute;
-top:40px;
-left: 30%;
-border-radius: 5px;
+top:70px;
+left: 60%;
+align-items: center;
+background-color: grey;
+padding: 25px 25px;
+border-radius: 30px;
+
 }
 .searchInput{
     border: none;
     background-color: transparent;
+    font-size: 25px;
+}
+.searchInput::placeholder{
+  color: lightgray;
 }
