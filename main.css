@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;700&display=swap");
+
+* {
+background-color: rgb(247, 183, 111);
+    
+}
+.logo img{
+border-radius: 50%;
+position:relative;
+margin-bottom:50px;
+margin-left:10px;
+}
+.letter
+{
+position:absolute;
+top:55px;
+left:10%;
+}
+.letter h1{
+  font-size: 45px;
+  letter-spacing: 0.5em;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.letter p{
+  color: rgb(246, 234, 234);
+}
+.navbar {
+	list-style-type: none;
+	text-align: center;
+	display: flex;
+ margin-top: -90px;
+ margin-left: 30%;
+
+ 
+}
+	
+.navbar li {
+	display: inline;
+
+}
+
+.navbar a {
+	text-decoration: none;
+	font-family: Cambria, serif;
+	font-size: 40px;
+	padding:60px 30px ;
+	color: #596365;
+
+}
+
+.navbar a:hover {
+	text-decoration: none;
+	font-family: Cambria, serif;
+	font-size: 24px;
+	color: #000;
+}
+
+.search{
+position: absolute;
+top:40px;
+left: 30%;
+border-radius: 5px;
+}
+.searchInput{
+    border: none;
+    background-color: transparent;
+}
