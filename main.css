@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 * {
 background-color: rgb(247, 183, 111);
@@ -13,16 +13,26 @@ margin-left:10px;
 .letter
 {
 position:absolute;
-top:55px;
+top:60px;
 left:10%;
+letter-spacing: 5px;
 }
 .letter h1{
-  font-size: 45px;
-  letter-spacing: 0.5em;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 50px;
+  letter-spacing:5px;
+  font-family:'Dancing Script', 'Arial Narrow', Arial, sans-serif;
 }
 .letter p{
-  color: rgb(246, 234, 234);
+  color: rgb(100, 93, 93);
+  position:absolute;
+  top:70px;
+  text-decoration: underline;
+  font-size: 25px;
+  font-weight: 800;
+  
+
+
+  
 }
 .navbar {
 	list-style-type: none;
@@ -74,7 +84,12 @@ border-radius: 30px;
 .searchInput::placeholder{
   color: lightgray;
 }
-.letter{
-  font-size: 30px;
-
+.row {
+  display: flex;
 }
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
