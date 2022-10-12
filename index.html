@@ -24,14 +24,18 @@
         </div>
          <div class="navbar">
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="#About">About</a></li>
                 <li><a href="#product">Products</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#shop">Shop</a></li>
-                <li><a href="#cart"> <img src="images/cart.png"></a>
-                    
+                <div class="popup" onclick="myFunction()"><img src="images/cart.png">
+                    <span  class="popuptext" id="myPopup"> Add to Cart</span>
+                  </div>
+
+                
+                
                 </li>
                 </ul>   
     </nav>
@@ -39,6 +43,16 @@
     <div class="row">
         <div class="column">
           <img src="images/item1.jpg" alt="" style="width:100%" height="90%">
+          <p>Non-sticky grey pan 4 pieces</p>
+          <select>
+            <option>grey</option>
+            <option>black</option>
+            <option>Red</option>
+            <option>white</option>
+          </select>
+            
+    
+          
         </div>
         <div class="column">
           <img src="images/item2.jpg" alt="" style="width:100%" height="90%">
@@ -92,5 +106,7 @@
           <img src="images/item26.jpg" alt="" style="width:100%" height="90%">
         </div>
       </div>
+
+    <script src="script.js"> </script>
 </body>
 </html>
