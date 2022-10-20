@@ -29,122 +29,16 @@ letter-spacing: 5px;
   text-decoration: underline;
   font-size: 25px;
   font-weight: 800;
-  
-
-
-  
 }
-.navbar {
-	list-style-type: none;
-align-items: center;
-justify-content: center;
-	display: flex;
- margin-top: 90px;
- 
 
- 
-}
-	
-.navbar li {
-	display: inline;
+
+#product-listing img{
+float:left;
+padding: 3px 1px;
+width:25% ;
+height:380px;
+border-radius: 40px;
+margin: 40px 50px;
 
 }
 
-.navbar a {
-	text-decoration: none;
-	font-family: Cambria, serif;
-	font-size: 40px;
-	padding:60px 30px ;
-	color: #596365;
-
-}
-
-.navbar a:hover {
-	text-decoration: none;
-	font-family: Cambria, serif;
-	font-size: 24px;
-	color: #000;
-}
-
-.search{
-position: absolute;
-top:70px;
-left: 60%;
-align-items: center;
-background-color: grey;
-padding: 25px 25px;
-border-radius: 30px;
-
-}
-.searchInput{
-    border: none;
-    background-color: transparent;
-    font-size: 25px;
-}
-.searchInput::placeholder{
-  color: lightgray;
-}
-.row {
-  display: flex;
-}
-
-.column {
-  flex: 33.33%;
-  padding: 5px;
-}
-
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* The actual popup */
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class - hide and show the popup */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;} 
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
