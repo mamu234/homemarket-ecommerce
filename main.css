@@ -38,7 +38,7 @@ nav {
 .nav ul li {
         color: #fff;
         float: left;
-        padding: 20px;
+        padding: 15px;
         position: relative;
         left:40%;
 }
@@ -65,14 +65,17 @@ nav {
 }
 
 #product-listing img{
-float:left;
-padding: 5px 5px;
-width:490px;
-height:290px;
+float: left;
+clear: right;
+width:350px; 
+height:300px;
+padding: 1px 1px;
 border-radius: 20px;
-margin: 10px 10px;
+border: 5px solid rgb(160, 144, 144);
+margin: 10px 2px;
 position:relative;
 top: 30px;
+
 
 }
 #products-category button{
@@ -97,10 +100,22 @@ left:20%;
 
 
 #product-listing p{
-  float: left;
-  position: relative;
-  top: 330px;
-  right:450px
+ float: left;
+ clear: right;
+ position: relative;
+ top:380px;
+ left: 20%;
+
+
+  
+ 
+}
+
+#product-listing h1{
+  display:flex;
+ position: relative;
+ top:120px;
+ left:30%;
  
 }
 
@@ -108,8 +123,8 @@ left:20%;
 #product-listing button{
   float: left;
   position: relative;
-  top: 330px;
-  right:450px
+  top: 450px;
+  right:30%;
 }
 .nav img {
  width: 54px;
@@ -129,3 +144,44 @@ left:20%;
   cursor: pointer;
   text-decoration:none;
  }
+ .popup {
+  position: relative;
+  left:48%;
+ top:25px;
+ cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 250px;
+  height: 100px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 45%;
+  margin-left: -80px;
+}
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}

@@ -4,62 +4,74 @@ var productsListing = document.getElementById('product-listing')
 let products = [{
 image:'images/item1.jpg',
 category:'Pots and Pans', 
-description: 'Heavy sticky pans'
+description: 'Heavy sticky pans',
+amount:'Ksh:1,200'
 },
 {
 image:'images/item2.jpg',
 category:'Kitchen Equipment',
-description: 'Heavy sticky pans'
+description: 'Heavy sticky pans',
+amount:'Ksh:1,200'
 },
 {
 image:'images/item3.jpg',
 category:'Home Decor',
-description: 'Heavy sticky pans'
+description: 'Heavy sticky pans',
+amount:'Ksh:1,200'
 },
 {
 image:'images/item4.jpg',
 category:'Home Decor',
-description: 'Heavy sticky pans'
+description: 'Heavy sticky pans',
+amount:'Ksh:1,200'
 },
 {
 image:'images/item5.jpg',
 category:'Pots and Pans'   ,
-description: 'Heavy sticky pans' 
+description: 'Heavy sticky pans' ,
+amount:'Ksh:1,200'
 },
 {
 image:'images/item6.jpg',
 category:'Kitchen Equipment',
-description: 'Heavy sticky pans'   
+description: 'Heavy sticky pans',
+amount:'Ksh:1,200'   
 },
 {
 image:'images/item7.jpg' ,
 category:'Home Decor'  ,
-description: 'Heavy sticky pans'
+description: 'Heavy sticky pans',
+amount:'Ksh:1,200'
 },
 {
 image:'images/item8.jpg',
 category:'Kitchen Equipment' ,
-description: 'Heavy sticky pans'  
+description: 'Heavy sticky pans'  ,
+amount:'Ksh:1,200'
  },
 {
 image:'images/item9.jpg' ,
 category:'Pots and Pans',
-description: 'Heavy sticky pans'   
+description: 'Heavy sticky pans' ,
+amount:'Ksh:1,200'  
  },
  {
 image:'images/item10.jpg' ,
 category:'Pots and Pans' ,
-description: 'Heavy sticky pans'  
+description: 'Heavy sticky pans' ,
+amount:'Ksh:1,200' 
 },
 {
 image:'images/item11.jpg' ,
 category:'Utensils & Cutlery' ,
-description: 'Heavy sticky pans' 
+description: 'Heavy sticky pans' ,
+amount:'Ksh:1,200'
 },
 {
  image:'images/item12.jpg' ,
  category:'Pots and Pans' ,
- description: 'Heavy sticky pans'  
+ description: 'Heavy sticky pans',
+ amount:'Ksh:1,200'
  }
 
 ]
@@ -78,9 +90,15 @@ function createProductListing(category) {
             p.innerHTML= product.description
             div.appendChild(p)
 
+            let h1 = document.createElement('h1')
+            productsListing.appendChild(h1)
+            h1.innerHTML= product.amount
+            div.appendChild(h1)
+
+
             let button = document.createElement('button')
             productsListing.appendChild(button)
-             button.innerHTML = 'Cart'
+             button.innerHTML = 'Add to Cart'
              button.onclick = function(){
                 
             
@@ -129,11 +147,10 @@ for(var i = 0 ;i<categorys.length;i++){
 
 }
     
-function myFunction(){
-productsListing.innerHTML = ''
-console.log('select')
-}
-myFunction()
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
 
     
   
