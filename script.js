@@ -99,14 +99,11 @@ function createProductListing(category) {
             let button = document.createElement('button')
             productsListing.appendChild(button)
              button.innerHTML = 'Add to Cart'
-             button.onclick = function(){
-                
-            
             div.appendChild(button)
              }  
         }
     }
-}
+
 createProductListing('All')
 var productsCategory = document.getElementById("products-category")
 let categorys = [{
@@ -152,5 +149,18 @@ function myFunction() {
     popup.classList.toggle("show");
   }
 
-    
-  
+  const all_items_button = document.getElementsByTagName("button")
+  console.log(all_items_button)
+  for (var i = 0;i < all_items_button.length; i++){
+   var button = all_items_button[i]
+
+
+function addToCart(){
+button.onclick = function(){
+    button.innerHTML = products.description
+     addToCart()
+
+}
+
+}
+}
