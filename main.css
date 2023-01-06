@@ -1,66 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
-
-
-
-.logo img{
-border-radius:50%;
-height: 100px;
-/* position:relative;
-bottom:100px;
-left:-50%; */
-
-
+body{
+background-color: rgb(247, 239, 239);
 }
-
 .logo h3{
- color: #e8e1db;
-font-size:30px;
+ color: #655243f0;
+font-size:60px;
+font-weight:50px;
+word-spacing: 10px;
+letter-spacing: 0.2rem;
 font-family: 'Dancing Script';
-position: absolute;
-top:0px
+margin-top:15px;
+margin-left: 10px;
 }
+.logo h4{
+  margin-top: -60px;
+  margin-left: 10px;
+  font-size: 25px;
+  color: rgb(205, 107, 41);
 
-
-
-.nav {
-background-color: #d08047;
+}
+.vertical{
+  border-left: 3px solid rgb(62, 54, 48);
+  height: 20px;
+  margin-top: -58px;
+  margin-left: 250px;
+}
+.logo h5{
+  margin-top: -25px;
+  margin-left: 255px;
+  font-size: 25px;
+  color: rgb(205, 107, 41);
+}
+.vertical2{
+  border-left: 3px solid rgb(62, 54, 48);
+  height: 20px;
+  margin-top: -65px;
+  margin-left: 395px;
   
-}       
-.nav ul {
-        list-style-type: none;
-        margin: 0px;
-        padding: 0px;
-        font-size: 30px;
-      
-}               
-.nav ul li {
-        color: #fff;
-        float: left;
-        padding: 15px;
-        position: relative;
-        left:40%;
 }
-#nav ul li a {
-  color:rgb(203, 182, 182);
-  text-decoration: none;
-  font-weight: bold;
+
+.logo h6{
+  font-size: 25px;
+  margin-top: -25px;
+  margin-left: 400px;
+  color: rgb(205, 107, 41);
+}
+.form search{
+ border: 3px solid rgb(33, 30, 30); 
+  width:950px;
+  height: 45px;
+  margin-left: 500px;
+  position: relative; 
+  
+  
+}
+
+input[type=text] {
+  border: 3px solid rgb(33, 30, 30); 
+  width:950px;
+  height: 45px;
+  margin-left: 570px;
+  position: relative; 
+  bottom:110px;
+}
+::placeholder { 
   font-size: 30px;
-  display: block;
-}
-.nav ul li {
-  border-top-style: solid;
-  border-top-color: #CCC;
-  border-top-width: 2px;
-  
-}
-.nav ul li:hover {
-  color: #75b2de;
-  background-color: rgb(222, 198, 198);
-}
-.nav ul li a:hover {
-  color: #75b2de;
-  background-color: rgb(191, 157, 157);
+  border-top: 5px;
+  padding-top:10px;
+  text-align: center;
+
+}  
+button{
+  position:absolute;
+  top:7%;
+  width: 140px;
+  height: 53px;
 }
 
  #product-listing img{
@@ -68,8 +83,9 @@ float: left;
 clear: both;
 width:420px; 
 height:400px;
-padding:5px 10px;
-padding-top: 50px; 
+padding:15px 15px;
+margin:10px 15px;
+ 
 }
 
 #product-listing div{
@@ -79,7 +95,7 @@ float:left;
 #product-listing span{
  font-size: 25px;
  position: relative;
- right:25%;
+ left:30%;
 
 
 }
@@ -88,45 +104,40 @@ float:left;
   float: left;
   display: block;
   clear:none;
-top:120%;
-left:0%;
-background-color:#0a0a23;
-  color: #fff;
-  border:20px 20px; 
+position: relative;
+top:-50px;
+  font-weight:5px solid #655243f0 ;
+  border:none;
   border-radius:10px; 
-  padding:1px 1px;
-  margin: 10px 10px;
-  border-top: 10px;
-  font-size: 30px;
+  padding:5px 5px;
+  margin: 20px 60px;
+  border-top: -50px;
+  font-size: 35px;
   cursor: pointer;
 } 
 
 #products-category btn:hover {
-  background-color:#002ead;
+  text-decoration: underline;
+  background-color:#eaa54c;
   transition: 0.7s;
 }
-#productCategoryBreak{
-  clear:none;
-}
+
 
 #product-listing h1{
  position: relative;
- right:18%;
+ top:-20px;
+ left:30%;
  
 } 
 
 
  #product-listing div button{
-  font-size: 25px;
+  font-size: 20px;
  position: relative;
- right:30%;
+ top:-50px;
+ left:25%;
 } 
-.nav img {
- width: 54px;
- height: 43px;
- margin-left: 44%;
- margin-top: 30px;
-}
+
 #product-listing button{
   background-color: white;
   border: 2px solid black;
@@ -139,14 +150,34 @@ background-color:#0a0a23;
   cursor: pointer;
   text-decoration:none;
  }
+
+ .popup img{
+  position:absolute;
+  top: -200px;
+  margin-left: 190px;
+ }
  .popup {
   position: relative;
   left:78%;
- top:25px;
- cursor: pointer;
+  top:25px;
+  cursor: pointer;
 }
 
-/* The actual popup (appears on top) */
+hr.new1 {
+  border-top: 4px solid rgb(218, 102, 52);
+  position:relative;
+  top:-50px;
+  
+}
+
+hr.new2 {
+  border-top: 4px solid rgb(218, 102, 52);
+  position:relative;
+  top:-50px;
+  
+}
+
+
 .popup .popuptext {
   visibility: hidden;
   width: 250px;
