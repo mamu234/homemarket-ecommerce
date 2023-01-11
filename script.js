@@ -200,8 +200,8 @@ name:'Storage Equipment'
 },
 {
 name:'Home Decor'
-}
-]
+}];
+
 function deleteProductListing(){
 productsListing.innerHTML = ''
 }
@@ -239,3 +239,90 @@ function myFunction() {
        console.log(cartTotal)
    }
   }
+
+  let footer = document.getElementById("footer")
+  
+  var image = document.createElement('img')
+  image.src = "images/twitter.png"
+ footer.appendChild(image)
+ 
+ var image = document.createElement('img')
+ image.src = "images/instagram.png"
+ footer.appendChild(image)
+
+ var image = document.createElement('img')
+  image.src = "images/pinterest.png"
+ footer.appendChild(image)
+
+ var image = document.createElement('img')
+  image.src = "images/facebook.png"
+ footer.appendChild(image)
+
+
+ let para = document.createElement("a")
+ let link = document.createTextNode("About us");
+ para.appendChild(link)
+ para.href="About us";
+ footer.appendChild(para)
+
+
+
+ let para2 = document.createElement("a")
+ let link2 = document.createTextNode("Contact us");
+ para2.appendChild(link2)
+ para2.href="Contact us";
+ footer.appendChild(para2)
+
+ 
+ let para3 = document.createElement("a")
+ let link3 = document.createTextNode("Terms and Conditions");
+ para3.appendChild(link3)
+ para3.href="Terms and Conditions";
+ footer.appendChild(para3)
+
+
+ let para4 = document.createElement("a")
+ let link4 = document.createTextNode("Privacy policy");
+ para4.appendChild(link4)
+ para4.href="Privacy policy";
+ footer.appendChild(para4)
+
+ var payment = document.createElement('img')
+  payment.src = "images/paypal.png"
+ footer.appendChild(payment)
+
+ var payment2 = document.createElement('img')
+ payment2.src = "images/visa.png"
+footer.appendChild(payment2)
+
+
+let copyRight = document.createElement("p")
+ copyRight.innerHTML = "<h4>Copyright © HomeMarket-Kenya 2023</h4>"
+ footer.appendChild(copyRight)
+
+
+ ///// filtering items using search bar 
+const search = () =>{
+ const searchBox = document.getElementsByClassName("searchTerm" ).value.toUpperCase();
+ const storedItems = document.getElementById("product-listing")
+ const product = document.querySelectorAll(".product-list")
+ const productName = document.getElementsByTagName("h1")
+
+ for(var i=0; i < productName.length; i ++){
+     let match = product[i].getElementsByTagName("h1")[0];
+
+     if(match){
+        let textValue = match.textContent || match.innerHTML
+
+    if(textValue.toUpperCase().indexOf(searchBox) > -1){
+        product[i].style.display = '';
+    } else {
+     product[i].style.display = 'none';
+    
+     }
+
+ }
+}
+
+}
+

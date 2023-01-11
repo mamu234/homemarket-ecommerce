@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Market</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm">
 </head>
 <body>
     <section>
@@ -18,15 +19,20 @@
                     <h6>Kitchenware</h6>
             </div>
         </div>
-        <form class="search">
-            <input type="text" placeholder= "Search for Products"  required>
-            <button class="search-btn" type="submit">
-              <span>Search</span>
+        
+        <div class="wrap">
+          <div class="search">
+             <input type="text" class="searchTerm" placeholder="What are you looking for?" onclick="search()">
+             <button type="submit" class="searchButton">
+               <i class="fa fa-search"></i>
             </button>
-          </form>
-          <hr class="new1">
-        <div class="popup" onclick="myFunction()">
-            <img src="images/cart.png">
+          </div>
+       </div>
+        
+        
+          <div class="popup" onclick="myFunction()">
+            <img src="images/cart.png" >
+            <div class="hide"> 0 Items </div>
             <span class="popuptext" id="myPopup">Total.</span>
            
     </div>
@@ -37,20 +43,16 @@
        
     </div>
     <br style="clear: both" />
-    <hr class="new2">
-    <div id="product-listing">
+    <!-- <hr class="new2"> -->
+    <div id="product-listing" class="product-list">
     </div>     
    
     
-    <!-- <div class="footer">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-           <li><a href="About.html">About</a></li>
-           <li><a href="Gallery.html">Gallery</a></li>
-           <li><a href="Services.html">Services Information</a></li>
-           <li><a href="Contact.html">Contacts</a></li> 
-           </ul>
-        </div>     -->
+  <footer id="footer" style="color: lightslategray;">
+   
+    
+
+  </footer>
 
 
   

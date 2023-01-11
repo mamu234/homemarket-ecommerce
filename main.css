@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
+
 body{
 background-color: rgb(247, 239, 239);
 }
 .logo h3{
  color: #655243f0;
-font-size:60px;
+font-size:70px;
 font-weight:50px;
 word-spacing: 10px;
 letter-spacing: 0.2rem;
@@ -14,78 +15,117 @@ margin-top:15px;
 margin-left: 10px;
 }
 .logo h4{
-  margin-top: -60px;
+  margin-top: -65px;
   margin-left: 10px;
-  font-size: 25px;
+  font-size: 28px;
   color: rgb(205, 107, 41);
 
 }
 .vertical{
   border-left: 3px solid rgb(62, 54, 48);
   height: 20px;
-  margin-top: -58px;
-  margin-left: 250px;
+  margin-top: -62px;
+  margin-left: 277px;
 }
 .logo h5{
   margin-top: -25px;
-  margin-left: 255px;
-  font-size: 25px;
+  margin-left: 282px;
+  font-size: 28px;
   color: rgb(205, 107, 41);
 }
 .vertical2{
   border-left: 3px solid rgb(62, 54, 48);
   height: 20px;
-  margin-top: -65px;
-  margin-left: 395px;
+  margin-top: -73px;
+  margin-left: 435px;
   
 }
 
 .logo h6{
-  font-size: 25px;
-  margin-top: -25px;
-  margin-left: 400px;
+  font-size: 28px;
+  margin-top: -28px;
+  margin-left: 445px;
   color: rgb(205, 107, 41);
 }
-.form search{
- border: 3px solid rgb(33, 30, 30); 
-  width:950px;
-  height: 45px;
-  margin-left: 500px;
-  position: relative; 
-  
-  
+
+.search {
+  width: 100%;
+  display: flex;
 }
 
-input[type=text] {
-  border: 3px solid rgb(33, 30, 30); 
-  width:950px;
-  height: 45px;
-  margin-left: 570px;
-  position: relative; 
-  bottom:110px;
+.searchTerm {
+  width: 100%;
+  border: 5px solid #1fd3eb;
+  border-right: none;
+  padding: 5px;
+  height: 35px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #2299bd;
+  position: absolute;
+  top:-370px;
+  left:7%;
 }
-::placeholder { 
-  font-size: 30px;
-  border-top: 5px;
-  padding-top:10px;
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 70px;
+  height: 54px;
+  border: 1px solid #00B4CC;
+  background: #22c7dd;
   text-align: center;
-
-}  
-button{
-  position:absolute;
-  top:7%;
-  width: 140px;
-  height: 53px;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+  opacity: 0.7;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 15px;
+  position: absolute;
+  top:-370px;
+  left:100.5%;
 }
+.searchButton:hover {
+  background-color: rgb(63, 208, 237);
+}
+
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+  
+.wrap input{
+  font-size: 20px;
+}
+
 
  #product-listing img{
 float: left;
 clear: both;
 width:420px; 
 height:400px;
-padding:15px 15px;
-margin:10px 15px;
- 
+padding:1px;
+margin:15px 20px;
+/* -webkit-transition: 1s ease-in-out;
+-moz-transition: 1s ease-in-out;
+-o-transition: 1s ease-in-out;
+transition: 1s ease-in-out;
+cursor:pointer; */
+}
+#product-listing img:hover {
+  padding: 5px 5px;
+  background-color:#4b4844;
+  /* -webkit-transform: rotate(360deg) scale(2);
+    -moz-transform: rotate(360deg) scale(2);
+    -o-transform: rotate(360deg) scale(2);
+    -ms-transform: rotate(360deg) scale(2);
+    transform: rotate(360deg) scale(2); */
 }
 
 #product-listing div{
@@ -99,27 +139,33 @@ float:left;
 
 
 }
- 
+#products-category{
+background-color:grey;
+height: 100px;
+position: relative;
+top:0px;
+
+}
 #products-category btn{
   float: left;
   display: block;
   clear:none;
 position: relative;
-top:-50px;
+top:-10px;
   font-weight:5px solid #655243f0 ;
   border:none;
   border-radius:10px; 
-  padding:5px 5px;
-  margin: 20px 60px;
+  padding:15px 15px;
+  margin: 20px 25px;
   border-top: -50px;
   font-size: 35px;
   cursor: pointer;
 } 
 
 #products-category btn:hover {
-  text-decoration: underline;
+  padding: 20px 30px;
   background-color:#eaa54c;
-  transition: 0.7s;
+  transition: 0.5s;
 }
 
 
@@ -153,61 +199,111 @@ top:-50px;
 
  .popup img{
   position:absolute;
-  top: -200px;
-  margin-left: 190px;
+  top: -150px;
+ left:-150px;
+  margin-left: 185px;
+  width: 50px;
+  padding:10px 10px;
+  border: 5px solid #555;
  }
+  .popup img:hover{
+    background-color: #c99374;
+  }
+  
  .popup {
   position: relative;
   left:78%;
-  top:25px;
+  top:40px;
   cursor: pointer;
 }
-
-hr.new1 {
-  border-top: 4px solid rgb(218, 102, 52);
-  position:relative;
-  top:-50px;
-  
+.hide {
+  display: none;
 }
-
-hr.new2 {
-  border-top: 4px solid rgb(218, 102, 52);
-  position:relative;
-  top:-50px;
-  
-}
+.popup img:hover + .hide {
+    display: block;
+    color: red;
+    position: relative;
+    top:-190px;
+    left:100px ;
+    font-size: 30px;
+  }
 
 
 .popup .popuptext {
   visibility: hidden;
   width: 250px;
-  height: 100px;
-  background-color:rgb(221, 216, 216);
+  height: 50px;
+  font-size: 40px;
+  background-color:rgb(38, 36, 36);
   color: rgb(235, 224, 224);
   text-align: center;
   border-radius: 6px;
   padding: 8px 0;
   position: absolute;
   z-index: 1;
-  top: 50%;
-  left: 45%;
-  margin-left: -80px;
+  bottom:150px;
 }
-/* Popup arrow */
+
 .popup .popuptext::after {
   content: "";
   position: absolute;
   top: 70%;
-  left: 70%;
+  left: 100%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
   border-color: #555 transparent transparent transparent;
-}
+} 
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
 .popup .show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s
+}
+
+#footer{
+background-color: #d3c2b5f0;
+position:absolute;
+top:363%;
+width: 100%;
+height: 300px;
+}
+
+
+#footer img:nth-of-type(1),img:nth-of-type(2),img:nth-of-type(3),img:nth-of-type(4){
+  width: 55px;
+  padding: 40px;
+  position: relative;
+  left:30%;
+ 
+}
+#footer a {
+font-size: 20px;
+display: inline-block;
+padding:20px;
+color: black;
+position:relative;
+top:-4px;
+left:1%;
+
+
+}
+#footer img:nth-of-type(5),img:nth-of-type(6){
+  position: relative;
+  top:40%;
+  right:25%;
+  padding:1px 5px;
+  margin: 20px;
+width: 70px;
+
+ 
+}
+#footer p :nth-of-type(1){
+  font-size: 20px;
+  position: relative;
+  top:30px;
+  left:250%;
+  color: black ;
+  
 }
