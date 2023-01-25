@@ -1,4 +1,4 @@
-var cartTotal = 0
+var productSelected = 0
 
 var productsListing = document.getElementById('product-listing')
 
@@ -8,6 +8,7 @@ category:'Kitchen Equipment',
 description: 'Mixer',
 amount:'Ksh:8,900',
 amountNumber:8900
+
 },
 {
 image:'images/image2.jpeg',
@@ -176,7 +177,7 @@ function createProductListing(category) {
             productsListing.appendChild(button)
              button.innerHTML = 'Add to Cart'
              button.amount = product.amountNumber
-            div.appendChild(button)
+             div.appendChild(button)
              }  
         }
     }
@@ -227,16 +228,26 @@ productsCategory.appendChild(productCategoryBreak)
 function myFunction() {
     var popup = document.getElementById("myPopup");
     var popuptext = document.getElementsByClassName("popuptext")[0]
-    popuptext.innerHTML= 'total:' + cartTotal
+    popuptext.innerHTML= 'item:' + productSelected
     popup.classList.toggle("show");
+    
+    var showItems = document.getElementsByClassName("hide")[0]
+    showItems.innerHTML= 'item:' + productSelected
+    showItems.classList.toggle("show");
   }
+
+
+
 
   const all_items_button = document.getElementsByTagName("button")
    for (var i = 0;i < all_items_button.length; i++){
-   var button = all_items_button[i]
-   button.onclick = function(){
-       cartTotal = cartTotal + button.amount 
-       console.log(cartTotal)
+        var button = all_items_button[i]
+        if(button.innerHTML == 'Add to Cart'){
+            button.onclick = function(){
+            productSelected = productSelected + button.amount
+            console.log(productSelected) 
+   }
+   
    }
   }
 
@@ -302,27 +313,18 @@ let copyRight = document.createElement("p")
 
 
  ///// filtering items using search bar 
-const search = () =>{
- const searchBox = document.getElementsByClassName("searchTerm" ).value.toUpperCase();
- const storedItems = document.getElementById("product-listing")
- const product = document.querySelectorAll(".product-list")
- const productName = document.getElementsByTagName("h1")
-
- for(var i=0; i < productName.length; i ++){
-     let match = product[i].getElementsByTagName("h1")[0];
-
-     if(match){
-        let textValue = match.textContent || match.innerHTML
-
-    if(textValue.toUpperCase().indexOf(searchBox) > -1){
-        product[i].style.display = '';
-    } else {
-     product[i].style.display = 'none';
+function search(){
+    let filter = document.getElementById('search').value.toUpperCase();
+     for(var i=0;i<productsListing.children.length;i++){
+         let div = productsListing.children[i];
+         
     
+         let span = div.getElementsByTagName('span')[0]
+          if(span.innerHTML.toUpperCase().indexOf(filter) > -1){
+              div.style.display = '';
+          } else {
+              div.style.display = 'none';
+          }
+          
      }
-
- }
 }
-
-}
-
