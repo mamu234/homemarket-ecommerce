@@ -226,13 +226,14 @@ top:-10px;
     top:-190px;
     left:100px ;
     font-size: 30px;
+    
   } 
 
 
 .popup .popuptext {
   visibility: hidden;
-  width: 250px;
-  height: 50px;
+  width: 500px;
+  height: 500px;
   font-size: 40px;
   background-color:rgb(38, 36, 36);
   color: rgb(235, 224, 224);
@@ -241,7 +242,9 @@ top:-10px;
   padding: 8px 0;
   position: absolute;
   z-index: 1;
-  bottom:150px;
+  bottom:20px;
+  left:100px;
+
 }
 
 .popup .popuptext::after {

@@ -177,6 +177,7 @@ function createProductListing(category) {
             productsListing.appendChild(button)
              button.innerHTML = 'Add to Cart'
              button.amount = product.amountNumber
+            
              div.appendChild(button)
              }  
         }
