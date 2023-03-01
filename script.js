@@ -1,4 +1,4 @@
-var cartTotal = 0
+var productSelected = 0
 
 var productsListing = document.getElementById('product-listing')
 
@@ -8,6 +8,7 @@ category:'Kitchen Equipment',
 description: 'Mixer',
 amount:'Ksh:8,900',
 amountNumber:8900
+
 },
 {
 image:'images/image2.jpeg',
@@ -103,10 +104,10 @@ amountNumber:1200
 ,
 {
     image:'images/image15.jpg' ,
-    category:'Kitchen Equipment',
-    description: 'Toaster',
-    amount:'Ksh:1,200',
-    amountNumber:1200
+    category:'Storage Equipment',
+    description: 'Laundary basket',
+    amount:'Ksh:2,200',
+    amountNumber:2200
     },
     {
         image:'images/image16.jpg' ,
@@ -117,14 +118,14 @@ amountNumber:1200
         },  
         {
             image:'images/image17.jpg' ,
-            category:'Home Decor',
+            category:'Storage Equipment',
             description: 'shoe rack',
             amount:'Ksh:1,200',
             amountNumber:1200
             },
             {
                 image:'images/image18.jpg' ,
-                category:'Home Decor',
+                category:'Storage Equipment',
                 description: 'Laundary basket',
                 amount:'Ksh:1,200',
                 amountNumber:1200
@@ -143,6 +144,34 @@ amountNumber:1200
                         amount:'Ksh:1,200',
                         amountNumber:1200
                         },
+                        {
+                            image:'images/image21.jpg' ,
+                            category:'Pots and Pans',
+                            description: 'cooking pots with lids',
+                            amount:'Ksh:8,200',
+                            amountNumber:8200
+                            },
+                            {
+                                image:'images/image22.jpg' ,
+                                category:'Pots and Pans',
+                                description: 'stainless cooking pots',
+                                amount:'Ksh:5,000',
+                                amountNumber:5000
+                                },
+                                {
+                                    image:'images/image23.jpg' ,
+                                    category:'Kitchen Equipment',
+                                    description: 'kitchen accessory',
+                                    amount:'Ksh:3,500',
+                                    amountNumber:3500
+                                    },
+                                    {
+                                        image:'images/image24.jpg' ,
+                                        category:'Pots and Pans',
+                                        description: 'Frying pans',
+                                        amount:'Ksh:4,200',
+                                        amountNumber:4200
+                                        },
 
    
 
@@ -175,8 +204,9 @@ function createProductListing(category) {
             let button = document.createElement('button')
             productsListing.appendChild(button)
              button.innerHTML = 'Add to Cart'
-             button.amount = product.amountNumber
-            div.appendChild(button)
+             button.product = product
+            
+             div.appendChild(button)
              }  
         }
     }
@@ -227,16 +257,29 @@ productsCategory.appendChild(productCategoryBreak)
 function myFunction() {
     var popup = document.getElementById("myPopup");
     var popuptext = document.getElementsByClassName("popuptext")[0]
-    popuptext.innerHTML= 'total:' + cartTotal
+    popuptext.innerHTML= 'item:' + productSelected
     popup.classList.toggle("show");
+    
+    var showItems = document.getElementsByClassName("hide")[0]
+    showItems.innerHTML= 'item:' +  productSelected.product.category + product.amount + product.image
+    showItems.classList.toggle("show");
   }
+
+
+
 
   const all_items_button = document.getElementsByTagName("button")
    for (var i = 0;i < all_items_button.length; i++){
-   var button = all_items_button[i]
-   button.onclick = function(){
-       cartTotal = cartTotal + button.amount 
-       console.log(cartTotal)
+        var button = all_items_button[i]
+        if(button.innerHTML == 'Add to Cart'){
+            button.onclick = function(){
+            productSelected = productSelected + button.product.category + button.product.amount + button.product.image
+            
+
+         
+            console.log(productSelected) 
+   }
+   
    }
   }
 
@@ -302,27 +345,18 @@ let copyRight = document.createElement("p")
 
 
  ///// filtering items using search bar 
-const search = () =>{
- const searchBox = document.getElementsByClassName("searchTerm" ).value.toUpperCase();
- const storedItems = document.getElementById("product-listing")
- const product = document.querySelectorAll(".product-list")
- const productName = document.getElementsByTagName("h1")
-
- for(var i=0; i < productName.length; i ++){
-     let match = product[i].getElementsByTagName("h1")[0];
-
-     if(match){
-        let textValue = match.textContent || match.innerHTML
-
-    if(textValue.toUpperCase().indexOf(searchBox) > -1){
-        product[i].style.display = '';
-    } else {
-     product[i].style.display = 'none';
+function search(){
+    let filter = document.getElementById('search').value.toUpperCase();
+     for(var i=0;i<productsListing.children.length;i++){
+         let div = productsListing.children[i];
+         
     
+         let span = div.getElementsByTagName('span')[0]
+          if(span.innerHTML.toUpperCase().indexOf(filter) > -1){
+              div.style.display = '';
+          } else {
+              div.style.display = 'none';
+          }
+          
      }
-
- }
 }
-
-}
-
