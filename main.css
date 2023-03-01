@@ -246,9 +246,8 @@ top:-10px;
   top:-50px;
   bottom:-100px;
   left:-600px;
-    overflow: scroll;
-  }
-
+  overflow:scroll;
+}
 
 
 .popup .popuptext::after {
