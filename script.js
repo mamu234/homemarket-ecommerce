@@ -257,11 +257,11 @@ productsCategory.appendChild(productCategoryBreak)
 function myFunction() {
     var popup = document.getElementById("myPopup");
     var popuptext = document.getElementsByClassName("popuptext")[0]
-    popuptext.innerHTML= 'item:' + productSelected.products
+    popuptext.innerHTML= 'item:' + productSelected
     popup.classList.toggle("show");
     
     var showItems = document.getElementsByClassName("hide")[0]
-    showItems.innerHTML= 'item:' + productSelected.products
+    showItems.innerHTML= 'item:' +  productSelected.product.category + product.amount + product.image
     showItems.classList.toggle("show");
   }
 
@@ -273,8 +273,8 @@ function myFunction() {
         var button = all_items_button[i]
         if(button.innerHTML == 'Add to Cart'){
             button.onclick = function(){
-            productSelected = productSelected + button.product.amount
-            productSelected = productSelected + button.product.description
+            productSelected = productSelected + button.product.category + button.product.amount + button.product.image
+            
 
          
             console.log(productSelected) 
