@@ -104,10 +104,10 @@ amountNumber:1200
 ,
 {
     image:'images/image15.jpg' ,
-    category:'Kitchen Equipment',
-    description: 'Toaster',
-    amount:'Ksh:1,200',
-    amountNumber:1200
+    category:'Storage Equipment',
+    description: 'Laundary basket',
+    amount:'Ksh:2,200',
+    amountNumber:2200
     },
     {
         image:'images/image16.jpg' ,
@@ -118,14 +118,14 @@ amountNumber:1200
         },  
         {
             image:'images/image17.jpg' ,
-            category:'Home Decor',
+            category:'Storage Equipment',
             description: 'shoe rack',
             amount:'Ksh:1,200',
             amountNumber:1200
             },
             {
                 image:'images/image18.jpg' ,
-                category:'Home Decor',
+                category:'Storage Equipment',
                 description: 'Laundary basket',
                 amount:'Ksh:1,200',
                 amountNumber:1200
@@ -144,6 +144,34 @@ amountNumber:1200
                         amount:'Ksh:1,200',
                         amountNumber:1200
                         },
+                        {
+                            image:'images/image21.jpg' ,
+                            category:'Pots and Pans',
+                            description: 'cooking pots with lids',
+                            amount:'Ksh:8,200',
+                            amountNumber:8200
+                            },
+                            {
+                                image:'images/image22.jpg' ,
+                                category:'Pots and Pans',
+                                description: 'stainless cooking pots',
+                                amount:'Ksh:5,000',
+                                amountNumber:5000
+                                },
+                                {
+                                    image:'images/image23.jpg' ,
+                                    category:'Kitchen Equipment',
+                                    description: 'kitchen accessory',
+                                    amount:'Ksh:3,500',
+                                    amountNumber:3500
+                                    },
+                                    {
+                                        image:'images/image24.jpg' ,
+                                        category:'Pots and Pans',
+                                        description: 'Frying pans',
+                                        amount:'Ksh:4,200',
+                                        amountNumber:4200
+                                        },
 
    
 
@@ -176,7 +204,7 @@ function createProductListing(category) {
             let button = document.createElement('button')
             productsListing.appendChild(button)
              button.innerHTML = 'Add to Cart'
-             button.amount = product.amountNumber
+             button.product = product
             
              div.appendChild(button)
              }  
@@ -229,11 +257,11 @@ productsCategory.appendChild(productCategoryBreak)
 function myFunction() {
     var popup = document.getElementById("myPopup");
     var popuptext = document.getElementsByClassName("popuptext")[0]
-    popuptext.innerHTML= 'item:' + productSelected
+    popuptext.innerHTML= 'item:' + productSelected.products
     popup.classList.toggle("show");
     
     var showItems = document.getElementsByClassName("hide")[0]
-    showItems.innerHTML= 'item:' + productSelected
+    showItems.innerHTML= 'item:' + productSelected.products
     showItems.classList.toggle("show");
   }
 
@@ -245,7 +273,10 @@ function myFunction() {
         var button = all_items_button[i]
         if(button.innerHTML == 'Add to Cart'){
             button.onclick = function(){
-            productSelected = productSelected + button.amount
+            productSelected = productSelected + button.product.amount
+            productSelected = productSelected + button.product.description
+
+         
             console.log(productSelected) 
    }
    
